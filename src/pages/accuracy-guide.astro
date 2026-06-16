@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Online Ruler Accuracy Guide"
+	description="Learn how online ruler accuracy works, why browser zoom matters, and how to get better physical measurements from your screen."
+	canonicalPath="/accuracy-guide/"
+>
+	<main id="main">
+		<section class="accuracy-band px-spacing-md py-spacing-5xl md:px-spacing-lg">
+			<div class="mx-auto max-w-7xl">
+				<p class="mb-spacing-sm font-mono text-xs text-white/60">accuracy guide</p>
+				<h1 class="max-w-3xl text-balance text-5xl font-semibold leading-tight tracking-normal">Make Screen Measurements More Reliable.</h1>
+				<p class="mt-spacing-md max-w-2xl text-lg leading-8 text-white/70">
+					An online ruler can be useful for quick measurements, but physical accuracy depends on calibration, screen density, browser zoom, and display scaling.
+				</p>
+			</div>
+		</section>
+
+		<section class="bg-canvas px-spacing-md py-spacing-4xl md:px-spacing-lg">
+			<div class="mx-auto grid max-w-5xl gap-spacing-lg">
+				<article class="card-marketing">
+					<h2 class="text-2xl font-semibold tracking-normal">Keep Browser Zoom At 100%.</h2>
+					<p class="mt-spacing-sm text-body">
+						Zoom changes how CSS pixels are mapped to the display. Calibrate and measure at 100% zoom when exact size matters.
+					</p>
+				</article>
+				<article class="card-marketing">
+					<h2 class="text-2xl font-semibold tracking-normal">Use A Physical Reference.</h2>
+					<p class="mt-spacing-sm text-body">
+						Credit card calibration is practical because it compares the ruler to a real object with a standard width of 85.60 mm.
+					</p>
+				</article>
+				<article class="card-marketing">
+					<h2 class="text-2xl font-semibold tracking-normal">Recalibrate When Displays Change.</h2>
+					<p class="mt-spacing-sm text-body">
+						External monitors, display scaling, and operating-system settings can change the physical result. Save a fresh calibration for each screen.
+					</p>
+				</article>
+			</div>
+		</section>
+	</main>
+</BaseLayout>

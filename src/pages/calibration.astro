@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const methods = [
+	{
+		title: "Auto-Detect Device",
+		label: "Method 1",
+		body: "Use this when you need a fast starting point. It estimates the screen scale from browser data and device hints, then lets you refine later.",
+		steps: ["Open the ruler page.", "Select Detect Device.", "Check the ruler against a known physical object."],
+	},
+	{
+		title: "Screen Diagonal",
+		label: "Method 2",
+		body: "Use this when you know the exact diagonal size of your laptop, monitor, tablet, or phone display.",
+		steps: ["Find your display diagonal in inches.", "Enter the value in the ruler calibration panel.", "Apply the result and measure at 100% browser zoom."],
+	},
+	{
+		title: "Credit Card Calibration",
+		label: "Method 3",
+		body: "Use this for the strongest practical calibration. A standard card is 85.60 mm wide, making it easy to match the guide on screen.",
+		steps: ["Place a standard card on the screen.", "Adjust the guide until the card edges match.", "Save the calibration for future visits."],
+	},
+];
+---
+
+<BaseLayout
+	title="Ruler Calibration Methods"
+	description="Calibrate the realcode online ruler with auto-detect, screen diagonal, or credit card calibration for more accurate screen measurements."
+	canonicalPath="/calibration/"
+>
+	<main id="main">
+		<section class="bg-canvas px-spacing-md py-spacing-5xl md:px-spacing-lg">
+			<div class="mx-auto max-w-7xl">
+				<p class="mb-spacing-sm font-mono text-xs text-mute">calibration</p>
+				<h1 class="max-w-3xl text-balance text-5xl font-semibold leading-tight tracking-normal">Choose The Right Calibration Method.</h1>
+				<p class="mt-spacing-md max-w-2xl text-lg leading-8 text-body">
+					Browser pixels are not guaranteed to match physical inches. Calibration gives the ruler a reliable scale for your screen.
+				</p>
+			</div>
+		</section>
+
+		<section class="bg-canvas-soft px-spacing-md py-spacing-4xl md:px-spacing-lg">
+			<div class="mx-auto grid max-w-7xl gap-spacing-md lg:grid-cols-3">
+				{methods.map((method) => (
+					<article class="card-marketing">
+						<p class="font-mono text-xs text-mute">{method.label}</p>
+						<h2 class="mt-spacing-xs text-2xl font-semibold tracking-normal">{method.title}</h2>
+						<p class="mt-spacing-sm text-body">{method.body}</p>
+						<ol class="mt-spacing-lg space-y-spacing-xs text-sm text-body">
+							{method.steps.map((step) => <li>{step}</li>)}
+						</ol>
+					</article>
+				))}
+			</div>
+		</section>
+	</main>
+</BaseLayout>

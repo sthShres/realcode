@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const features = [
+	["Edge Placement", "Put the ruler on the top, bottom, left, right, or all edges of the measuring stage."],
+	["Unit Switching", "Switch between centimeters and inches without losing the calibrated scale."],
+	["Persistent Calibration", "The selected calibration is saved locally in the browser for repeat measurements."],
+	["Fullscreen Mode", "Use a cleaner measuring surface when you need more room on screen."],
+	["Confidence Readout", "See which method is active and how reliable the current calibration is expected to be."],
+	["SEO Help Content", "Accuracy notes and FAQs are separated into crawlable pages instead of hiding everything inside the tool."],
+];
+---
+
+<BaseLayout
+	title="Online Ruler Features"
+	description="Explore realcode online ruler features including edge placement, unit switching, fullscreen mode, and persisted calibration."
+	canonicalPath="/features/"
+>
+	<main id="main">
+		<section class="bg-canvas px-spacing-md py-spacing-5xl md:px-spacing-lg">
+			<div class="mx-auto max-w-7xl">
+				<p class="mb-spacing-sm font-mono text-xs text-mute">features</p>
+				<h1 class="max-w-3xl text-balance text-5xl font-semibold leading-tight tracking-normal">A Ruler Built For Repeated Use.</h1>
+				<p class="mt-spacing-md max-w-2xl text-lg leading-8 text-body">
+					realcode focuses on the tool first: calibrated scale, clear controls, and edge placement that works on desktop and mobile screens.
+				</p>
+			</div>
+		</section>
+
+		<section class="bg-canvas-soft px-spacing-md py-spacing-4xl md:px-spacing-lg">
+			<div class="mx-auto grid max-w-7xl gap-spacing-md md:grid-cols-2 lg:grid-cols-3">
+				{features.map(([title, body], index) => (
+					<article class="card-marketing">
+						<span class="font-mono text-xs text-mute">{String(index + 1).padStart(2, "0")}</span>
+						<h2 class="mt-spacing-md text-xl font-semibold tracking-normal">{title}</h2>
+						<p class="mt-spacing-xs text-body">{body}</p>
+					</article>
+				))}
+			</div>
+		</section>
+	</main>
+</BaseLayout>

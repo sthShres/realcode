@@ -1,0 +1,31 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <rect x="80" y="80" width="1040" height="470" rx="16" fill="#ffffff" stroke="#ebebeb"/>
+  <rect x="80" y="80" width="1040" height="70" rx="16" fill="#171717"/>
+  <text x="120" y="126" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">realcode Online Ruler</text>
+  <g transform="translate(120 210)">
+    <rect width="860" height="80" fill="#ffffff" stroke="#171717"/>
+    <g stroke="#171717">
+      <path d="M0 80V20"/>
+      <path d="M72 80V44"/>
+      <path d="M144 80V44"/>
+      <path d="M216 80V44"/>
+      <path d="M288 80V20"/>
+      <path d="M360 80V44"/>
+      <path d="M432 80V44"/>
+      <path d="M504 80V44"/>
+      <path d="M576 80V20"/>
+      <path d="M648 80V44"/>
+      <path d="M720 80V44"/>
+      <path d="M792 80V44"/>
+      <path d="M860 80V20"/>
+    </g>
+    <text x="12" y="36" fill="#171717" font-family="ui-monospace, monospace" font-size="18">0</text>
+    <text x="300" y="36" fill="#171717" font-family="ui-monospace, monospace" font-size="18">1</text>
+    <text x="588" y="36" fill="#171717" font-family="ui-monospace, monospace" font-size="18">2</text>
+  </g>
+  <text x="120" y="380" fill="#171717" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="600">Accurate online ruler</text>
+  <text x="120" y="430" fill="#4d4d4d" font-family="Inter, Arial, sans-serif" font-size="28">Measure inches, cm, and mm at actual size.</text>
+  <rect x="120" y="470" width="246" height="46" rx="23" fill="#171717"/>
+  <text x="148" y="501" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Free online ruler tool</text>
+</svg>
