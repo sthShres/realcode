@@ -12,15 +12,15 @@ interface Props {
 
 const {
 	title,
-	description = "Use realcode's online ruler to measure in centimeters, millimeters, and inches with auto-detect, screen diagonal, and credit card calibration.",
+	description = "Use shresOrigins Scale to measure in centimeters, millimeters, and inches with auto-detect, screen diagonal, and credit card calibration.",
 	canonicalPath = "/",
 	keywords,
 	ogImage = "/og-online-ruler.svg",
-	ogImageAlt = "realcode online ruler measuring interface",
+	ogImageAlt = "shresOrigins Scale measuring interface",
 } = Astro.props;
 const canonical = new URL(canonicalPath, Astro.site ?? "https://realcode.com").toString();
 const absoluteOgImage = new URL(ogImage, Astro.site ?? "https://realcode.com").toString();
-const pageTitle = `${title} | realcode`;
+const pageTitle = `${title} | shresOrigins`;
 ---
 
 <!doctype html>
@@ -38,7 +38,7 @@ const pageTitle = `${title} | realcode`;
 		<link rel="canonical" href={canonical} />
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="en_US" />
-		<meta property="og:site_name" content="realcode" />
+		<meta property="og:site_name" content="shresOrigins" />
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonical} />
@@ -69,9 +69,9 @@ const pageTitle = `${title} | realcode`;
 		<a href="#main" class="skip-link">Skip to content</a>
 		<nav class="sticky top-0 z-50 border-b border-hairline bg-canvas/90 px-spacing-sm backdrop-blur-md md:px-spacing-lg">
 			<div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-spacing-md">
-				<a href="/" class="focus-visible-ring flex min-w-0 items-center gap-spacing-xs rounded-sm" aria-label="realcode home">
-					<span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-primary text-lg font-semibold text-on-primary">r</span>
-					<span class="hidden truncate text-lg font-semibold tracking-normal sm:inline">realcode</span>
+				<a href="/" class="focus-visible-ring flex min-w-0 items-center gap-spacing-xs rounded-sm" aria-label="shresOrigins home">
+					<span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-primary text-lg font-semibold text-on-primary">s</span>
+					<span class="truncate text-lg font-semibold tracking-normal">shresOrigins</span>
 				</a>
 				<div class="flex items-center gap-spacing-xs md:gap-spacing-md">
 					<a href="/calibration/" class="nav-link nav-link-calibrate">Calibrate</a>
@@ -91,17 +91,17 @@ const pageTitle = `${title} | realcode`;
 			<div class="mx-auto grid max-w-7xl grid-cols-1 gap-spacing-xl md:grid-cols-4">
 				<div class="col-span-1 md:col-span-2">
 					<div class="mb-spacing-md flex items-center gap-spacing-xs">
-						<div class="flex h-6 w-6 items-center justify-center rounded-xs bg-primary text-sm font-semibold text-on-primary">r</div>
-						<span class="text-sm font-semibold tracking-normal">realcode</span>
+						<div class="flex h-6 w-6 items-center justify-center rounded-xs bg-primary text-sm font-semibold text-on-primary">s</div>
+						<span class="text-sm font-semibold tracking-normal">shresOrigins</span>
 					</div>
 					<p class="max-w-xs text-sm text-body">
-						Browser-based measurement tools with clear calibration, persistent settings, and real-size rulers for everyday work.
+						Browser-based measurement products from Shrestha Orgins with clear calibration, persistent settings, and real-size rulers for everyday work.
 					</p>
 				</div>
 				<div>
 					<h4 class="mb-spacing-md font-mono text-xs text-mute">Product</h4>
 					<ul class="space-y-spacing-xs text-sm text-body">
-						<li><a href="/" class="focus-visible-ring hover:text-ink">Online Ruler</a></li>
+						<li><a href="/" class="focus-visible-ring hover:text-ink">Scale</a></li>
 						<li><a href="/calibration/" class="focus-visible-ring hover:text-ink">Calibration</a></li>
 						<li><a href="/features/" class="focus-visible-ring hover:text-ink">Features</a></li>
 					</ul>
@@ -115,7 +115,7 @@ const pageTitle = `${title} | realcode`;
 				</div>
 			</div>
 			<div class="mx-auto mt-spacing-xl flex max-w-7xl flex-col items-center justify-between gap-spacing-md border-t border-hairline pt-spacing-xl font-mono text-xs text-mute md:flex-row">
-				<p>© {new Date().getFullYear()} realcode. All rights reserved.</p>
+				<p>© {new Date().getFullYear()} shresOrigins. All rights reserved.</p>
 				<span>Built for calibrated browser measurement</span>
 			</div>
 		</footer>

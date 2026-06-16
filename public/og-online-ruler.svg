@@ -2,7 +2,7 @@
   <rect width="1200" height="630" fill="#fafafa"/>
   <rect x="80" y="80" width="1040" height="470" rx="16" fill="#ffffff" stroke="#ebebeb"/>
   <rect x="80" y="80" width="1040" height="70" rx="16" fill="#171717"/>
-  <text x="120" y="126" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">realcode Online Ruler</text>
+  <text x="120" y="126" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">shresOrigins Scale</text>
   <g transform="translate(120 210)">
     <rect width="860" height="80" fill="#ffffff" stroke="#171717"/>
     <g stroke="#171717">
