@@ -1,429 +1,138 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageLinks = [
+const companyPillars = [
 	{
-		href: "/calibration/",
-		title: "Calibration Methods",
-		body: "Auto-detect, screen diagonal, and credit card calibration explained.",
+		title: "Practical Digital Utilities",
+		body: "We build browser-based products that solve everyday measurement and workflow problems without requiring accounts, installs, or complex setup.",
 	},
 	{
-		href: "/features/",
-		title: "Ruler Features",
-		body: "Edge placement, unit switching, fullscreen mode, and saved settings.",
+		title: "Clarity Before Complexity",
+		body: "Each product is designed around clean controls, readable feedback, and decisions that help people trust what they are using.",
 	},
 	{
-		href: "/accuracy-guide/",
-		title: "Accuracy Guide",
-		body: "How browser zoom, display scaling, and calibration affect real size.",
+		title: "Reliable Product Craft",
+		body: "Shrestha Origins focuses on lightweight tools with careful calibration, durable interfaces, and useful documentation around real-world accuracy.",
 	},
+];
+
+const productHighlights = [
+	["Current Product", "Scale"],
+	["Measurement Units", "CM, MM, Inches"],
+	["Calibration", "Auto, Diagonal, Card"],
 ];
 
 const schema = {
 	"@context": "https://schema.org",
-	"@type": "WebApplication",
-	name: "Shrestha Orgins Scale",
+	"@type": "Organization",
+	name: "Shrestha Origins",
 	url: "https://realcode.com/",
-	applicationCategory: "UtilitiesApplication",
-	operatingSystem: "Any",
-	description: "A calibrated scale product from Shrestha Orgins for measuring in centimeters, millimeters, and inches with edge placement controls.",
-	offers: {
+	description: "Shrestha Origins builds polished browser-based utility products, including Scale for calibrated screen measurement.",
+	brand: {
+		"@type": "Brand",
+		name: "Shrestha Origins",
+	},
+	makesOffer: {
 		"@type": "Offer",
-		price: "0",
-		priceCurrency: "USD",
+		itemOffered: {
+			"@type": "WebApplication",
+			name: "Scale",
+			applicationCategory: "UtilitiesApplication",
+		},
 	},
 };
-
-const keywords = "Online Ruler, online ruler inches, online ruler in cm, online ruler mm, online ruler cm, free online ruler, online ruler in mm, online ruler camera, mm online ruler, accurate online ruler, 12 inch online ruler, online ruler inches actual size, online ruler to scale, online ruler 12 inch, online ruler tool, online ruler actual size, real online ruler, actual size online ruler";
 ---
 
 <BaseLayout
-	title="Scale - Actual Size Inches, CM, And MM"
-	description="Use shresOrigins Scale from Shrestha Orgins to measure actual size in inches, cm, and mm. Calibrate the accurate online scale with auto-detect, screen diagonal, or credit card sizing."
-	keywords={keywords}
-	ogImageAlt="Scale product showing actual size inch, centimeter, and millimeter measurements"
+	title="Professional Digital Utility Products"
+	description="Shrestha Origins is a digital product company building professional browser utilities, including Scale for calibrated on-screen measurement."
+	ogImageAlt="Shrestha Origins Scale product preview"
 >
 	<main id="main">
-		<section class="border-b border-hairline bg-canvas px-spacing-md py-spacing-4xl md:px-spacing-lg">
-			<div class="product-hero mx-auto max-w-7xl">
-				<div class="product-hero-copy">
-					<p class="font-mono text-xs text-mute">Shrestha Orgins products</p>
-					<h1 class="mt-spacing-sm break-words text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl md:text-6xl">Shrestha Orgins</h1>
-					<div class="mt-spacing-lg">
-						<p class="font-mono text-xs text-mute">Product</p>
-						<p class="mt-spacing-xs text-3xl font-semibold tracking-normal">Scale</p>
-					</div>
-					<p class="mt-spacing-md max-w-2xl text-lg leading-8 text-body">
-						Scale is a calibrated browser measuring product for quick actual-size checks in centimeters, millimeters, and inches.
-					</p>
-					<a href="#ruler" class="btn-primary focus-visible-ring mt-spacing-lg">Open Scale</a>
-				</div>
-
-				<div class="scale-showcase" aria-label="Scale product preview">
-					<div class="scale-showcase-header">
-						<span>Scale</span>
-						<span>cm / in</span>
-					</div>
-					<div class="scale-display">
-						<div class="scale-rule" aria-hidden="true">
-							<span>0</span>
-							<span>1</span>
-							<span>2</span>
-							<span>3</span>
-							<span>4</span>
-							<span>5</span>
-						</div>
-						<div class="scale-readout">
-							<span>85.60 mm</span>
-							<small>card calibration ready</small>
-						</div>
-					</div>
+		<section class="landing-hero">
+			<div class="landing-hero-visual" aria-hidden="true">
+				<div class="hero-ruler hero-ruler-top"></div>
+				<div class="hero-ruler hero-ruler-side"></div>
+				<div class="hero-measure-card">
+					<span class="hero-measure-label">Scale</span>
+					<strong>85.60 mm</strong>
+					<small>calibrated browser measurement</small>
 				</div>
 			</div>
-		</section>
-
-		<section id="ruler" class="border-b border-hairline bg-canvas-soft px-spacing-md py-spacing-xl md:px-spacing-lg">
-			<div class="mx-auto max-w-7xl">
-				<div class="ruler-app" data-ruler-app>
-					<div class="ruler-toolbar" aria-label="Ruler controls">
-						<div class="min-w-0">
-							<p class="font-mono text-xs text-mute">calibrated scale</p>
-							<h2 class="text-2xl font-semibold tracking-normal">Scale For Any Screen Edge.</h2>
-						</div>
-						<div class="toolbar-actions">
-							<div class="segmented" role="group" aria-label="Measurement unit">
-								<button class="segment is-active" type="button" data-unit="cm">cm</button>
-								<button class="segment" type="button" data-unit="in">in</button>
-							</div>
-							<button class="icon-btn" type="button" data-action="fullscreen" aria-label="Open Fullscreen Measuring Mode">
-								<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5" /></svg>
-							</button>
-						</div>
-					</div>
-
-					<div class="placement-grid" aria-label="Ruler placement">
-						<label><input type="radio" name="placement" value="top" checked /> Top</label>
-						<label><input type="radio" name="placement" value="bottom" /> Bottom</label>
-						<label><input type="radio" name="placement" value="left" /> Left</label>
-						<label><input type="radio" name="placement" value="right" /> Right</label>
-						<label><input type="radio" name="placement" value="all" /> All Edges</label>
-					</div>
-
-					<div class="measure-stage" data-placement="top">
-						<div class="ruler ruler-horizontal ruler-top" data-ruler="top" aria-label="Top ruler"></div>
-						<div class="ruler ruler-horizontal ruler-bottom" data-ruler="bottom" aria-label="Bottom ruler"></div>
-						<div class="ruler ruler-vertical ruler-left" data-ruler="left" aria-label="Left ruler"></div>
-						<div class="ruler ruler-vertical ruler-right" data-ruler="right" aria-label="Right ruler"></div>
-						<div class="stage-center">
-							<p class="font-mono text-xs text-mute">live ruler</p>
-							<p class="text-sm text-body">Place an item against the active edge. Calibrate first for physical accuracy.</p>
-							<div class="mt-spacing-md grid grid-cols-2 gap-spacing-sm text-sm md:grid-cols-4">
-								<div class="metric"><span data-readout="ppi">96.0</span><small>CSS PPI</small></div>
-								<div class="metric"><span data-readout="method">Default</span><small>Method</small></div>
-								<div class="metric"><span data-readout="zoom">100%</span><small>Zoom Hint</small></div>
-								<div class="metric"><span data-readout="confidence">Baseline</span><small>Confidence</small></div>
-							</div>
-						</div>
-					</div>
-
-					<div id="calibrate" class="calibration-grid">
-						<section class="calibration-panel">
-							<div class="panel-heading">
-								<p class="font-mono text-xs text-mute">Method 1</p>
-								<h3>Auto-Detect Device</h3>
-							</div>
-							<p>Use browser screen data and device hints for a quick starting scale.</p>
-							<button class="btn-primary focus-visible-ring" type="button" data-action="auto">Detect Device</button>
-							<p class="status" data-status="auto" aria-live="polite">Ready to detect.</p>
-						</section>
-
-						<section class="calibration-panel">
-							<div class="panel-heading">
-								<p class="font-mono text-xs text-mute">Method 2</p>
-								<h3>Screen Diagonal</h3>
-							</div>
-							<label class="field-label" for="screen-diagonal">Screen diagonal in inches</label>
-							<div class="input-row">
-								<input id="screen-diagonal" name="screen-diagonal" type="number" min="3" max="80" step="0.1" inputmode="decimal" autocomplete="off" placeholder="13.3…" />
-								<button class="btn-secondary focus-visible-ring" type="button" data-action="diagonal">Apply</button>
-							</div>
-							<p class="status" data-status="diagonal" aria-live="polite">Enter the display size from your device specs.</p>
-						</section>
-
-						<section class="calibration-panel calibration-panel-wide">
-							<div class="panel-heading">
-								<p class="font-mono text-xs text-mute">Method 3</p>
-								<h3>Credit Card Calibration</h3>
-							</div>
-							<p>Place a standard card on the guide and adjust until the width matches the card.</p>
-							<div class="card-calibrator">
-								<div class="credit-card-guide" data-card-guide>
-									<span>85.60 mm</span>
-								</div>
-							</div>
-							<label class="field-label" for="card-width">Guide width</label>
-							<input id="card-width" name="card-width" type="range" min="140" max="880" step="1" value="324" autocomplete="off" />
-							<div class="input-row">
-								<span class="font-mono text-xs text-mute"><span data-card-px>324</span> px wide</span>
-								<button class="btn-primary focus-visible-ring" type="button" data-action="card">Save Card Calibration</button>
-							</div>
-							<p class="status" data-status="card" aria-live="polite">Adjust the guide to match your card.</p>
-						</section>
-					</div>
+			<div class="landing-hero-content mx-auto max-w-7xl px-spacing-md md:px-spacing-lg">
+				<p class="font-mono text-xs uppercase text-white/70">Shrestha Origins</p>
+				<h1 class="mt-spacing-sm max-w-4xl text-balance text-5xl font-semibold leading-tight tracking-normal text-white md:text-7xl">
+					Professional browser tools for precise everyday work.
+				</h1>
+				<p class="mt-spacing-lg max-w-2xl text-lg leading-8 text-white/78">
+					Shrestha Origins creates focused digital utility products with clean interfaces, dependable calibration, and documentation that helps people use the web as a practical workspace.
+				</p>
+				<div class="mt-spacing-xl flex flex-wrap gap-spacing-sm">
+					<a href="/product/" class="btn-hero-primary focus-visible-ring">View Scale Product</a>
+					<a href="/features/" class="btn-hero-secondary focus-visible-ring">Explore Features</a>
 				</div>
 			</div>
 		</section>
 
 		<section class="bg-canvas px-spacing-md py-spacing-4xl md:px-spacing-lg">
-			<div class="mx-auto max-w-7xl">
-				<div class="mb-spacing-xl max-w-2xl">
-					<p class="mb-spacing-sm font-mono text-xs text-mute">learn more</p>
-					<h2 class="text-balance text-4xl font-semibold tracking-normal">Calibration, Features, And Accuracy.</h2>
+			<div class="mx-auto grid max-w-7xl gap-spacing-xl lg:grid-cols-[0.9fr_1.1fr]">
+				<div>
+					<p class="mb-spacing-sm font-mono text-xs text-mute">company</p>
+					<h2 class="text-balance text-4xl font-semibold tracking-normal">Built around useful products, not noise.</h2>
 				</div>
-				<div class="grid gap-spacing-md md:grid-cols-2 lg:grid-cols-3">
-					{pageLinks.map((page) => (
-						<a href={page.href} class="card-marketing focus-visible-ring block hover:border-hairline-strong">
-							<h3 class="text-xl font-semibold tracking-normal">{page.title}</h3>
-							<p class="mt-spacing-xs text-body">{page.body}</p>
-						</a>
-					))}
+				<div class="space-y-spacing-md text-lg leading-8 text-body">
+					<p>
+						Shrestha Origins is a product-focused company developing modern browser utilities for people who need quick, understandable tools. Our work starts with practical needs, then adds the polish, structure, and accuracy guidance expected from professional software.
+					</p>
+					<p>
+						The company’s first product, Scale, turns a screen into a calibrated measuring surface for centimeters, millimeters, and inches. It reflects the way we build: direct workflows, clear controls, and dependable results that respect the user’s time.
+					</p>
 				</div>
 			</div>
 		</section>
 
 		<section class="bg-canvas-soft px-spacing-md py-spacing-4xl md:px-spacing-lg">
-			<div class="mx-auto max-w-4xl">
-				<p class="mb-spacing-sm font-mono text-xs text-mute">online ruler guide</p>
-				<h2 class="text-balance text-4xl font-semibold tracking-normal">Free Online Ruler For Actual Size Measurements.</h2>
-				<div class="seo-copy mt-spacing-lg space-y-spacing-md text-body">
-					<p>
-						shresOrigins Scale is a free online ruler designed for quick screen-based measurements when a physical ruler is not nearby. The tool opens directly to a working scale, so you can place an item against the top, bottom, left, or right edge of the measuring area and start checking size immediately. It supports the common searches people use every day, including Online Ruler, online ruler inches, online ruler in cm, online ruler mm, and online ruler actual size, while keeping the experience focused on the measurement surface instead of a long landing page.
-					</p>
-					<p>
-						You can use the ruler as an online ruler in cm for centimeter measurements, an online ruler in mm for smaller details, or an online ruler inches mode for inch-based work. The cm scale is useful for school supplies, craft materials, small parts, labels, envelopes, and common objects. The mm online ruler view is better when you need finer spacing or want to compare a small gap. If you work with US sizing, the inches mode works as an online ruler inches actual size reference after calibration, including a 12 inch online ruler layout when your screen has enough width.
-					</p>
-					<p>
-						Accuracy matters because every display handles pixels differently. A real online ruler must account for browser zoom, operating-system scaling, device pixel ratio, and screen size. shresOrigins Scale includes three calibration methods to make the ruler more dependable: auto-detect device, screen diagonal, and credit card calibration. Auto-detect is the fastest way to estimate the scale. Screen diagonal is useful when you know the exact size of your display. Credit card calibration is often the best practical method because a standard card has a known width of 85.60 mm. After calibration, the ruler becomes an accurate online ruler to scale for that browser and screen.
-					</p>
-					<p>
-						The tool is also built for different measuring positions. Many online ruler tool pages only show one horizontal strip, which can make objects awkward to align. shresOrigins Scale lets you choose the active edge: top, bottom, left, right, or all edges. That means you can measure against the closest side of your display and avoid moving the item across the screen. The fullscreen control gives more room when you want a cleaner actual size online ruler, and the calibration readout shows the active method, CSS pixels per inch, zoom hint, and confidence level.
-					</p>
-					<p>
-						Use this online ruler cm and online ruler 12 inch tool for everyday estimating, layout checks, craft planning, product photos, packaging checks, stationery, and small desk measurements. It is not a replacement for precision calipers or certified measuring equipment, but it is a practical accurate online ruler for fast comparisons. For best results, keep browser zoom at 100%, calibrate on the screen you are using, and recalibrate when you switch monitors. If you need an online ruler camera feature, use shresOrigins Scale as the calibrated scale reference beside the object, then capture the object and screen together with your device camera.
-					</p>
-					<p>
-						Because the measurement runs in your browser, shresOrigins Scale does not require an account, download, or installation. Your calibration is saved locally so the free online ruler is ready the next time you return. Whether you search for online ruler in mm, online ruler cm, online ruler inches, online ruler to scale, or actual size online ruler, the goal is the same: give you a clean, fast, calibrated measuring tool that works across modern desktop, tablet, and mobile browsers.
-					</p>
-					<p>
-						The layout is intentionally simple for repeat use. Open the page, choose the edge that matches your object, select centimeters or inches, and calibrate only when the screen changes. That makes shresOrigins Scale useful for quick checks at home, school, work, or while comparing small products online.
-					</p>
+			<div class="mx-auto max-w-7xl">
+				<div class="mb-spacing-xl max-w-2xl">
+					<p class="mb-spacing-sm font-mono text-xs text-mute">principles</p>
+					<h2 class="text-balance text-4xl font-semibold tracking-normal">A disciplined approach to small, high-value tools.</h2>
 				</div>
+				<div class="grid gap-spacing-md md:grid-cols-3">
+					{companyPillars.map((pillar, index) => (
+						<article class="card-marketing">
+							<span class="font-mono text-xs text-mute">{String(index + 1).padStart(2, "0")}</span>
+							<h3 class="mt-spacing-md text-xl font-semibold tracking-normal">{pillar.title}</h3>
+							<p class="mt-spacing-xs text-body">{pillar.body}</p>
+						</article>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-canvas px-spacing-md py-spacing-4xl md:px-spacing-lg">
+			<div class="product-feature mx-auto max-w-7xl">
+				<div class="product-feature-copy">
+					<p class="mb-spacing-sm font-mono text-xs text-mute">product</p>
+					<h2 class="text-balance text-4xl font-semibold tracking-normal">Scale is the first Shrestha Origins utility.</h2>
+					<p class="mt-spacing-md text-lg leading-8 text-body">
+						Use Scale to measure actual size on screen, calibrate with a known reference, and switch between edge placements for objects that are easier to align from different sides.
+					</p>
+					<div class="mt-spacing-lg grid gap-spacing-sm sm:grid-cols-3">
+						{productHighlights.map(([label, value]) => (
+							<div class="stat-tile">
+								<span>{label}</span>
+								<strong>{value}</strong>
+							</div>
+						))}
+					</div>
+					<a href="/product/" class="btn-primary focus-visible-ring mt-spacing-lg">Open Product Page</a>
+				</div>
+				<a href="/product/" class="product-preview focus-visible-ring" aria-label="Open Scale product page">
+					<img src="/og-online-ruler.svg" alt="Scale product interface preview" loading="lazy" />
+				</a>
 			</div>
 		</section>
 	</main>
 
 	<script type="application/ld+json" set:html={JSON.stringify(schema)} />
-
-	<script>
-		const app = document.querySelector('[data-ruler-app]');
-		const stage = app?.querySelector('.measure-stage');
-		const rulers = app ? Array.from(app.querySelectorAll('[data-ruler]')) : [];
-		const storageKey = 'realcode-ruler-calibration';
-		const state = {
-			cssPpi: 96,
-			devicePixelRatio: window.devicePixelRatio || 1,
-			visualScale: window.visualViewport?.scale || 1,
-			unit: 'cm',
-			method: 'Default',
-			confidence: 'Baseline',
-		};
-
-		const format = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
-		const readout = (name) => app?.querySelector(`[data-readout="${name}"]`);
-		const status = (name) => app?.querySelector(`[data-status="${name}"]`);
-		const currentDevicePixelRatio = () => window.devicePixelRatio || 1;
-		const currentVisualScale = () => window.visualViewport?.scale || 1;
-		const effectiveCssPpi = () => {
-			const dprRatio = state.devicePixelRatio / currentDevicePixelRatio();
-			const visualRatio = state.visualScale / currentVisualScale();
-			return state.cssPpi * dprRatio * visualRatio;
-		};
-		const pxPerMm = () => effectiveCssPpi() / 25.4;
-		const pxPerIn = () => effectiveCssPpi();
-
-		const setStatus = (name, text) => {
-			const target = status(name);
-			if (target) target.textContent = text;
-		};
-
-		const persist = () => {
-			localStorage.setItem(storageKey, JSON.stringify(state));
-		};
-
-		const load = () => {
-			try {
-				const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
-				if (Number.isFinite(saved.cssPpi)) Object.assign(state, saved);
-			} catch {
-				localStorage.removeItem(storageKey);
-			}
-
-			if (!Number.isFinite(state.devicePixelRatio) || state.devicePixelRatio <= 0) {
-				state.devicePixelRatio = currentDevicePixelRatio();
-			}
-			if (!Number.isFinite(state.visualScale) || state.visualScale <= 0) {
-				state.visualScale = currentVisualScale();
-			}
-		};
-
-		const getZoomHint = () => {
-			const dprRatio = currentDevicePixelRatio() / state.devicePixelRatio;
-			const visualRatio = currentVisualScale() / state.visualScale;
-			return `${Math.round(dprRatio * visualRatio * 100)}%`;
-		};
-
-		const updateReadouts = () => {
-			readout('ppi').textContent = format.format(effectiveCssPpi());
-			readout('method').textContent = state.method;
-			readout('zoom').textContent = getZoomHint();
-			readout('confidence').textContent = state.confidence;
-		};
-
-		const createTick = ({ position, major, label, vertical }) => {
-			const tick = document.createElement('span');
-			tick.className = `tick ${major ? 'tick-major' : ''}`;
-			tick.style[vertical ? 'top' : 'left'] = `${position}px`;
-			if (label !== null) {
-				const text = document.createElement('span');
-				text.textContent = label;
-				tick.append(text);
-			}
-			return tick;
-		};
-
-		const renderRuler = (ruler) => {
-			const vertical = ruler.classList.contains('ruler-vertical');
-			const length = vertical ? ruler.clientHeight : ruler.clientWidth;
-			const fragment = document.createDocumentFragment();
-			const step = state.unit === 'cm' ? pxPerMm() : pxPerIn() / 16;
-			const majorEvery = state.unit === 'cm' ? 10 : 16;
-			const maxTicks = Math.floor(length / step);
-
-			ruler.textContent = '';
-			for (let i = 0; i <= maxTicks; i += 1) {
-				const isMajor = i % majorEvery === 0;
-				const label = isMajor ? String(i / majorEvery) : null;
-				fragment.append(createTick({ position: i * step, major: isMajor, label, vertical }));
-			}
-			ruler.append(fragment);
-		};
-
-		const render = () => {
-			rulers.forEach(renderRuler);
-			updateReadouts();
-		};
-
-		const applyCalibration = ({ cssPpi, method, confidence }) => {
-			state.cssPpi = Math.max(40, Math.min(260, cssPpi));
-			state.devicePixelRatio = currentDevicePixelRatio();
-			state.visualScale = currentVisualScale();
-			state.method = method;
-			state.confidence = confidence;
-			persist();
-			render();
-		};
-
-		const autoDetect = () => {
-			const ua = navigator.userAgent.toLowerCase();
-			const dpr = window.devicePixelRatio || 1;
-			let cssPpi = 96;
-			let confidence = 'Estimated';
-
-			if (/iphone/.test(ua)) {
-				cssPpi = 163;
-				confidence = 'Device Hint';
-			} else if (/ipad/.test(ua)) {
-				cssPpi = 132;
-				confidence = 'Device Hint';
-			} else if (/macintosh/.test(ua) && dpr >= 2) {
-				cssPpi = 110;
-				confidence = 'Retina Estimate';
-			} else if (/android/.test(ua)) {
-				cssPpi = Math.max(96, Math.min(180, 96 * dpr));
-				confidence = 'Android Estimate';
-			}
-
-			applyCalibration({ cssPpi, method: 'Auto', confidence });
-			setStatus('auto', `Applied ${format.format(cssPpi)} CSS pixels per inch.`);
-		};
-
-		const applyDiagonal = () => {
-			const input = app.querySelector('#screen-diagonal');
-			const diagonal = Number(input.value);
-			if (!diagonal || diagonal < 3) {
-				setStatus('diagonal', 'Enter a diagonal size of at least 3 inches.');
-				input.focus();
-				return;
-			}
-			const cssDiagonal = Math.hypot(screen.width, screen.height);
-			const cssPpi = cssDiagonal / diagonal;
-			applyCalibration({ cssPpi, method: 'Diagonal', confidence: 'Very Good' });
-			setStatus('diagonal', `Applied ${format.format(cssPpi)} CSS pixels per inch from a ${diagonal}" screen.`);
-		};
-
-		const applyCard = () => {
-			const guide = app.querySelector('[data-card-guide]');
-			const width = guide.getBoundingClientRect().width;
-			const cssPpi = width / (85.6 / 25.4);
-			applyCalibration({ cssPpi, method: 'Card', confidence: 'Best' });
-			setStatus('card', `Saved ${format.format(cssPpi)} CSS pixels per inch from the card guide.`);
-		};
-
-		const updateCardGuide = () => {
-			const slider = app.querySelector('#card-width');
-			const guide = app.querySelector('[data-card-guide]');
-			const cardPx = app.querySelector('[data-card-px]');
-			guide.style.width = `${slider.value}px`;
-			cardPx.textContent = Math.round(guide.getBoundingClientRect().width);
-		};
-
-		if (app && stage) {
-			load();
-			render();
-			updateCardGuide();
-
-			app.addEventListener('click', (event) => {
-				const button = event.target.closest('button');
-				if (!button) return;
-
-				const unit = button.dataset.unit;
-				const action = button.dataset.action;
-
-				if (unit) {
-					state.unit = unit;
-					app.querySelectorAll('[data-unit]').forEach((item) => item.classList.toggle('is-active', item === button));
-					render();
-				}
-
-				if (action === 'auto') autoDetect();
-				if (action === 'diagonal') applyDiagonal();
-				if (action === 'card') applyCard();
-				if (action === 'fullscreen') stage.requestFullscreen?.();
-			});
-
-			app.addEventListener('input', (event) => {
-				if (event.target?.id === 'card-width') updateCardGuide();
-			});
-
-			app.addEventListener('change', (event) => {
-				if (event.target?.name === 'placement') {
-					stage.dataset.placement = event.target.value;
-					requestAnimationFrame(render);
-				}
-			});
-
-			window.addEventListener('resize', render);
-			window.visualViewport?.addEventListener('resize', render);
-		}
-	</script>
 </BaseLayout>
