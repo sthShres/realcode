@@ -1,5 +1,5 @@
 {
-  "name": "realcode",
+  "name": "shresorigins",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "npm run build && wrangler pages deploy ./dist --project-name realcode",
+    "deploy": "npm run build && wrangler pages deploy ./dist --project-name shresorigins",
     "cf:preview": "npm run build && wrangler pages dev ./dist",
     "astro": "astro"
   },
